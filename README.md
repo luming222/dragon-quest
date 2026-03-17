@@ -57,7 +57,7 @@
 
 ![Main Scene](screenshots/main.png)
 
-![Gameplay](screenshots/paly.png)
+![Gameplay](screenshots/play.png)
 
 后续如果补充更多展示图，建议继续统一放在 `screenshots/` 目录下。
 
