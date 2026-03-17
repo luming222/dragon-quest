@@ -1,0 +1,108 @@
+; Engine configuration file.
+; It's best edited using the editor UI and not directly,
+; since the parameters that go here are not all obvious.
+;
+; Format:
+;   [section] ; section goes between []
+;   param=value ; assign values to parameters
+
+config_version=5
+
+"ï»¿config_version"=5
+
+[animation]
+
+compatibility/default_parent_skeleton_in_mesh_instance_3d=true
+
+[application]
+
+config/name="Dragon Quest"
+run/main_scene="res://scenes/Main.tscn"
+config/features=PackedStringArray("4.6")
+
+[display]
+
+window/size/viewport_width=1280
+window/size/viewport_height=720
+window/stretch/mode="canvas_items"
+window/stretch/aspect="expand"
+
+[input]
+
+move_left={
+"deadzone": 0.5,
+"events": [{
+"keycode": 65,
+"type": "InputEventKey"
+}]
+}
+move_right={
+"deadzone": 0.5,
+"events": [{
+"keycode": 68,
+"type": "InputEventKey"
+}]
+}
+move_up={
+"deadzone": 0.5,
+"events": [{
+"keycode": 87,
+"type": "InputEventKey"
+}]
+}
+move_down={
+"deadzone": 0.5,
+"events": [{
+"keycode": 83,
+"type": "InputEventKey"
+}]
+}
+attack_light={
+"deadzone": 0.5,
+"events": [{
+"button_index": 1,
+"type": "InputEventMouseButton"
+}]
+}
+attack_heavy={
+"deadzone": 0.5,
+"events": [{
+"button_index": 2,
+"type": "InputEventMouseButton"
+}]
+}
+dodge={
+"deadzone": 0.5,
+"events": [{
+"keycode": 32,
+"type": "InputEventKey"
+}]
+}
+parry={
+"deadzone": 0.5,
+"events": [{
+"keycode": 70,
+"type": "InputEventKey"
+}]
+}
+skill_1={
+"deadzone": 0.5,
+"events": [{
+"keycode": 49,
+"type": "InputEventKey"
+}]
+}
+skill_2={
+"deadzone": 0.5,
+"events": [{
+"keycode": 50,
+"type": "InputEventKey"
+}]
+}
+skill_3={
+"deadzone": 0.5,
+"events": [{
+"keycode": 51,
+"type": "InputEventKey"
+}]
+}

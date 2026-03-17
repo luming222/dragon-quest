@@ -1,0 +1,9 @@
+.godot/
+
+# Godot mono/cache artifacts
+.mono/
+data_*/
+
+# OS/editor noise
+Thumbs.db
+Desktop.ini

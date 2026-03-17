@@ -1,0 +1,60 @@
+{
+  "run_profile": {
+    "name": "Earth Nation Vertical Slice",
+    "prepare_time": 1.4,
+    "target_duration_minutes": 10,
+    "starting_spirit": 55,
+    "wave_count": 2
+  },
+  "arena": {
+    "spawn_radius": 14.0,
+    "lane_z": 0.0,
+    "left_bound": -30.0,
+    "right_bound": 30.0
+  },
+  "wave_table": [
+    {
+      "id": "dustbound_path",
+      "label": "Dustbound Path",
+      "duration": 38.0,
+      "target_kills": 5,
+      "spawn_interval": 2.3,
+      "batch_size": 2,
+      "enemy_mix": ["melee"]
+    },
+    {
+      "id": "stone_breath",
+      "label": "Stone Breath",
+      "duration": 46.0,
+      "target_kills": 8,
+      "spawn_interval": 2.0,
+      "batch_size": 2,
+      "enemy_mix": ["melee", "ranged"]
+    }
+  ],
+  "elite_profile": {
+    "label": "Stonebound Vanguard",
+    "enemy_type": "charger",
+    "count": 2
+  },
+  "boss_profile": {
+    "label": "Keeper of the Burden",
+    "scene": "res://scenes/EnemyMiniBoss.tscn",
+    "phase_thresholds": [0.65],
+    "supply_choices": 2
+  },
+  "loot_table": [
+    {"slot": "weapon", "rarity": "common", "drop_weight": 40},
+    {"slot": "weapon", "rarity": "rare", "drop_weight": 20},
+    {"slot": "core", "rarity": "common", "drop_weight": 24},
+    {"slot": "core", "rarity": "rare", "drop_weight": 8},
+    {"slot": "charm", "rarity": "common", "drop_weight": 16},
+    {"slot": "charm", "rarity": "rare", "drop_weight": 6}
+  ],
+  "difficulty_curve": [
+    {"time": 0, "hp_mult": 1.0, "damage_mult": 1.0},
+    {"time": 120, "hp_mult": 1.12, "damage_mult": 1.06},
+    {"time": 240, "hp_mult": 1.24, "damage_mult": 1.12},
+    {"time": 360, "hp_mult": 1.38, "damage_mult": 1.18}
+  ]
+}

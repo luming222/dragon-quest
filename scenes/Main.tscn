@@ -1,0 +1,212 @@
+[gd_scene format=3 uid="uid://cuqkjxbvttba6"]
+
+[ext_resource type="Script" uid="uid://j4et7jja47fx" path="res://scripts/main.gd" id="1"]
+[ext_resource type="PackedScene" uid="uid://dhpq0baxlkjx3" path="res://scenes/Player.tscn" id="2"]
+[ext_resource type="Script" uid="uid://ta27ehd8hh0t" path="res://combat/combat_manager.gd" id="3"]
+[ext_resource type="PackedScene" path="res://scenes/HUD.tscn" id="5"]
+[ext_resource type="PackedScene" path="res://scenes/TouchControls.tscn" id="6"]
+[ext_resource type="Script" uid="uid://cxryjebjw8awm" path="res://world/level_manager.gd" id="7"]
+[ext_resource type="Script" uid="uid://oakljfvuhgny" path="res://world/terrain_generator.gd" id="8"]
+[ext_resource type="Script" path="res://world/run_manager.gd" id="9"]
+[ext_resource type="PackedScene" path="res://scenes/MingCompanion.tscn" id="10"]
+
+[sub_resource type="ProceduralSkyMaterial" id="6"]
+sky_top_color = Color(0.42, 0.56, 0.82, 1)
+sky_horizon_color = Color(0.75, 0.82, 0.9, 1)
+ground_bottom_color = Color(0.12, 0.13, 0.16, 1)
+ground_horizon_color = Color(0.25, 0.28, 0.32, 1)
+
+[sub_resource type="Sky" id="7"]
+sky_material = SubResource("6")
+
+[sub_resource type="Environment" id="3"]
+background_mode = 2
+sky = SubResource("7")
+ambient_light_color = Color(1, 1, 1, 1)
+ambient_light_energy = 1.6
+sdfgi_enabled = true
+
+[sub_resource type="StandardMaterial3D" id="2"]
+shading_mode = 0
+albedo_color = Color(0.22, 0.24, 0.18, 1)
+
+[sub_resource type="PlaneMesh" id="1"]
+size = Vector2(400, 400)
+
+[sub_resource type="BoxShape3D" id="9"]
+size = Vector3(400, 2, 400)
+
+[sub_resource type="StandardMaterial3D" id="5"]
+shading_mode = 0
+albedo_color = Color(0.2, 1, 0.4, 1)
+
+[sub_resource type="BoxMesh" id="4"]
+size = Vector3(1.5, 1.5, 1.5)
+
+[sub_resource type="BoxMesh" id="8"]
+size = Vector3(2, 3, 2)
+
+[sub_resource type="StandardMaterial3D" id="11"]
+shading_mode = 0
+albedo_color = Color(0.45, 0.2, 0.15, 1)
+
+[sub_resource type="CylinderMesh" id="10"]
+bottom_radius = 0.7
+height = 3.0
+
+[sub_resource type="BoxMesh" id="15"]
+size = Vector3(2, 1, 2)
+
+[sub_resource type="StandardMaterial3D" id="12"]
+shading_mode = 0
+albedo_color = Color(0.18, 0.5, 0.22, 1)
+
+[sub_resource type="SphereMesh" id="14"]
+radius = 1.0
+height = 2.0
+
+[sub_resource type="StandardMaterial3D" id="13"]
+shading_mode = 0
+albedo_color = Color(0.7, 0.8, 0.9, 1)
+
+[node name="Main" type="Node3D" unique_id=670141241]
+script = ExtResource("1")
+
+[node name="Camera3D" type="Camera3D" parent="." unique_id=967573359]
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=956852210]
+light_energy = 2.0
+shadow_enabled = true
+shadow_normal_bias = 1.0
+
+[node name="OmniLight3D" type="OmniLight3D" parent="." unique_id=1957990804]
+light_energy = 2.6
+shadow_enabled = true
+omni_range = 18.0
+
+[node name="FillLight" type="OmniLight3D" parent="." unique_id=834780071]
+light_color = Color(1, 0.95, 0.85, 1)
+light_energy = 1.8
+omni_range = 32.0
+
+[node name="CombatManager" type="Node" parent="." unique_id=1818228568]
+script = ExtResource("3")
+
+[node name="LevelManager" type="Node" parent="." unique_id=1834061642]
+script = ExtResource("7")
+
+[node name="RunManager" type="Node" parent="."]
+script = ExtResource("9")
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=1140083312]
+environment = SubResource("3")
+
+[node name="Player" parent="." unique_id=375634937 instance=ExtResource("2")]
+
+[node name="Floor" type="MeshInstance3D" parent="." unique_id=217871531]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.25346375, 0.108724594, -0.07413483)
+material_override = SubResource("2")
+mesh = SubResource("1")
+
+[node name="FloorBody" type="StaticBody3D" parent="." unique_id=827996067]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.24208534, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="FloorBody" unique_id=2074819531]
+shape = SubResource("9")
+
+[node name="DebugCube" type="MeshInstance3D" parent="." unique_id=1643055932]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.222222, 0)
+visible = false
+material_override = SubResource("5")
+mesh = SubResource("4")
+
+[node name="ArenaWalls" type="Node3D" parent="." unique_id=978097497]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 1.5410969)
+
+[node name="WallN" type="MeshInstance3D" parent="ArenaWalls" unique_id=536012161]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.5, -200)
+material_override = SubResource("2")
+mesh = SubResource("8")
+
+[node name="WallS" type="MeshInstance3D" parent="ArenaWalls" unique_id=523984231]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.5, 200)
+material_override = SubResource("2")
+mesh = SubResource("8")
+
+[node name="WallW" type="MeshInstance3D" parent="ArenaWalls" unique_id=397433719]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -200, 1.5, 0)
+material_override = SubResource("2")
+mesh = SubResource("8")
+
+[node name="WallE" type="MeshInstance3D" parent="ArenaWalls" unique_id=1013146228]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 200, 1.5, 0)
+material_override = SubResource("2")
+mesh = SubResource("8")
+
+[node name="Terrain" type="Node3D" parent="." unique_id=922231481]
+script = ExtResource("8")
+
+[node name="ThemeSets" type="Node3D" parent="." unique_id=1731256993]
+
+[node name="UndergroundSet" type="Node3D" parent="ThemeSets" unique_id=676491370]
+
+[node name="LavaPillarA" type="MeshInstance3D" parent="ThemeSets/UndergroundSet" unique_id=2007077431]
+transform = Transform3D(1.2, 0, 0, 0, 2, 0, 0, 0, 1.2, -6, 1.5, -6)
+visible = false
+material_override = SubResource("11")
+mesh = SubResource("10")
+
+[node name="LavaPillarB" type="MeshInstance3D" parent="ThemeSets/UndergroundSet" unique_id=1848634741]
+transform = Transform3D(1.1, 0, 0, 0, 1.7, 0, 0, 0, 1.1, 6, 1.5, -4)
+visible = false
+material_override = SubResource("11")
+mesh = SubResource("10")
+
+[node name="EmberCrystal" type="MeshInstance3D" parent="ThemeSets/UndergroundSet" unique_id=303380869]
+transform = Transform3D(0.6, 0, 0, 0, 0.8, 0, 0, 0, 0.6, 0, 0.5, 7)
+visible = false
+material_override = SubResource("11")
+mesh = SubResource("15")
+
+[node name="SurfaceSet" type="Node3D" parent="ThemeSets" unique_id=816688596]
+visible = false
+
+[node name="TreeTrunkA" type="MeshInstance3D" parent="ThemeSets/SurfaceSet" unique_id=32475794]
+transform = Transform3D(1.35, 0, 0, 0, 2.4, 0, 0, 0, 1.35, -16.5, 1.9, 5.2)
+material_override = SubResource("12")
+mesh = SubResource("10")
+
+[node name="TreeCanopyA" type="MeshInstance3D" parent="ThemeSets/SurfaceSet" unique_id=1286658688]
+transform = Transform3D(3.8, 0, 0, 0, 1.55, 0, 0, 0, 3.2, -16.2, 5.0, 5.5)
+material_override = SubResource("12")
+mesh = SubResource("15")
+
+[node name="StoneMound" type="MeshInstance3D" parent="ThemeSets/SurfaceSet" unique_id=709499175]
+transform = Transform3D(3.8, 0, 0, 0, 1.4, 0, 0, 0, 4.2, 16.2, 1.2, 18.8)
+material_override = SubResource("12")
+mesh = SubResource("15")
+
+[node name="SkySet" type="Node3D" parent="ThemeSets" unique_id=1216426420]
+
+[node name="CloudA" type="MeshInstance3D" parent="ThemeSets/SkySet" unique_id=200319571]
+transform = Transform3D(2.4, 0, 0, 0, 1, 0, 0, 0, 1.8, -6, 5, -6)
+material_override = SubResource("13")
+mesh = SubResource("14")
+
+[node name="CloudB" type="MeshInstance3D" parent="ThemeSets/SkySet" unique_id=1735960662]
+transform = Transform3D(2, 0, 0, 0, 0.8, 0, 0, 0, 1.6, 6, 4.5, -3)
+material_override = SubResource("13")
+mesh = SubResource("14")
+
+[node name="Ming" parent="." instance=ExtResource("10")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4, 0.6, 6)
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=2144430964]
+
+[node name="HUD" parent="CanvasLayer" unique_id=563752137 instance=ExtResource("5")]
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="TouchControls" parent="CanvasLayer" unique_id=1501907789 instance=ExtResource("6")]
+grow_horizontal = 2
+grow_vertical = 2

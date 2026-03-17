@@ -1,0 +1,72 @@
+[
+  {
+    "affix_id": "fury",
+    "tags": ["offense"],
+    "roll_range": {"damage_mult": [0.04, 0.1]},
+    "stack_rule": "add",
+    "conflict_tags": ["guard_only"]
+  },
+  {
+    "affix_id": "resonant",
+    "tags": ["element"],
+    "roll_range": {"resonance_bonus": [0.05, 0.12]},
+    "stack_rule": "max",
+    "conflict_tags": []
+  },
+  {
+    "affix_id": "flow",
+    "tags": ["resource"],
+    "roll_range": {"spirit_regen": [0.8, 2.0]},
+    "stack_rule": "add",
+    "conflict_tags": []
+  },
+  {
+    "affix_id": "guard",
+    "tags": ["defense"],
+    "roll_range": {"damage_reduction": [0.03, 0.08]},
+    "stack_rule": "max",
+    "conflict_tags": ["glass"]
+  },
+  {
+    "affix_id": "finisher",
+    "tags": ["boss"],
+    "roll_range": {"boss_bonus": [0.06, 0.15]},
+    "stack_rule": "add",
+    "conflict_tags": []
+  },
+  {
+    "affix_id": "catalyst",
+    "tags": ["element"],
+    "roll_range": {"stack_cap_bonus": [1, 2]},
+    "stack_rule": "max",
+    "conflict_tags": []
+  },
+  {
+    "affix_id": "bulwark",
+    "tags": ["defense", "counter"],
+    "roll_range": {"parry_guard": [6, 14]},
+    "stack_rule": "add",
+    "conflict_tags": []
+  },
+  {
+    "affix_id": "reversal",
+    "tags": ["counter", "offense"],
+    "roll_range": {"counter_damage": [8, 18]},
+    "stack_rule": "add",
+    "conflict_tags": []
+  },
+  {
+    "affix_id": "recovery",
+    "tags": ["counter", "sustain"],
+    "roll_range": {"counter_heal": [2, 5]},
+    "stack_rule": "add",
+    "conflict_tags": []
+  },
+  {
+    "affix_id": "last_stand",
+    "tags": ["defense", "resource"],
+    "roll_range": {"guard_spirit": [3, 7]},
+    "stack_rule": "add",
+    "conflict_tags": []
+  }
+]

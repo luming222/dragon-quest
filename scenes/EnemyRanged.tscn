@@ -1,0 +1,29 @@
+[gd_scene load_steps=4 format=3]
+
+[ext_resource type="Script" path="res://scripts/enemy_ranged.gd" id="1"]
+[ext_resource type="PackedScene" path="res://assets/kenney_mini_characters_1/Models/GLB_format/character-female-b.glb" id="2"]
+
+[sub_resource type="CapsuleShape3D" id="1"]
+radius = 0.35
+height = 1.4
+
+[sub_resource type="SphereShape3D" id="3"]
+radius = 0.8
+
+[node name="EnemyRanged" type="CharacterBody3D"]
+script = ExtResource("1")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+shape = SubResource("1")
+
+[node name="Model" parent="." instance=ExtResource("2")]
+scale = Vector3(0.9, 0.9, 0.9)
+
+[node name="Hurtbox" type="Area3D" parent="."]
+monitoring = true
+monitorable = true
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Hurtbox"]
+shape = SubResource("3")
+
+[connection signal="area_entered" from="Hurtbox" to="." method="_on_hurtbox_area_entered"]

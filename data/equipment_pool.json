@@ -1,0 +1,74 @@
+[
+  {
+    "item_id": "edge_proto",
+    "slot": "weapon",
+    "rarity": "common",
+    "base_stat": {"damage_mult": 0.08},
+    "affixes": ["fury", "resonant"],
+    "drop_weight": 30
+  },
+  {
+    "item_id": "breaker_lance",
+    "slot": "weapon",
+    "rarity": "rare",
+    "base_stat": {"damage_mult": 0.14, "attack_speed": 0.06},
+    "affixes": ["fury", "sunder", "finisher"],
+    "drop_weight": 18
+  },
+  {
+    "item_id": "core_pulse",
+    "slot": "core",
+    "rarity": "common",
+    "base_stat": {"spirit_max": 12, "spirit_regen": 1.5},
+    "affixes": ["resonant", "flow"],
+    "drop_weight": 22
+  },
+  {
+    "item_id": "core_prism",
+    "slot": "core",
+    "rarity": "rare",
+    "base_stat": {"spirit_max": 20, "resonance_bonus": 0.08},
+    "affixes": ["resonant", "catalyst"],
+    "drop_weight": 12
+  },
+  {
+    "item_id": "charm_guard",
+    "slot": "charm",
+    "rarity": "common",
+    "base_stat": {"max_hp": 10, "damage_reduction": 0.04},
+    "affixes": ["guard", "steady"],
+    "drop_weight": 20
+  },
+  {
+    "item_id": "charm_hunter",
+    "slot": "charm",
+    "rarity": "rare",
+    "base_stat": {"max_hp": 14, "elite_bonus": 0.1},
+    "affixes": ["finisher", "predator"],
+    "drop_weight": 10
+  },
+  {
+    "item_id": "warden_seal",
+    "slot": "charm",
+    "rarity": "common",
+    "base_stat": {"max_hp": 12, "parry_guard": 8},
+    "affixes": ["bulwark", "recovery", "last_stand"],
+    "drop_weight": 18
+  },
+  {
+    "item_id": "citadel_core",
+    "slot": "core",
+    "rarity": "rare",
+    "base_stat": {"damage_reduction": 0.05, "counter_damage": 10},
+    "affixes": ["bulwark", "reversal", "recovery"],
+    "drop_weight": 12
+  },
+  {
+    "item_id": "vigil_blade",
+    "slot": "weapon",
+    "rarity": "rare",
+    "base_stat": {"damage_mult": 0.1, "guard_spirit": 4},
+    "affixes": ["reversal", "last_stand", "guard"],
+    "drop_weight": 14
+  }
+]

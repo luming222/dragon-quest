@@ -1,0 +1,11 @@
+[gd_scene load_steps=3 format=3]
+
+[ext_resource type="Script" path="res://scripts/ming_companion.gd" id="1"]
+[ext_resource type="PackedScene" path="res://assets/kenney_mini_characters_1/Models/GLB_format/character-male-e.glb" id="2"]
+
+[node name="MingCompanion" type="Node3D"]
+script = ExtResource("1")
+visible = false
+
+[node name="Model" parent="." instance=ExtResource("2")]
+transform = Transform3D(1.9, 0, 0, 0, 1.9, 0, 0, 0, 1.9, 0, 0, 0)

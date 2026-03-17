@@ -1,0 +1,47 @@
+[
+  {
+    "element_id": 0,
+    "name": "Fire",
+    "on_hit_effect": "burn",
+    "max_stacks": 5,
+    "resonance_trigger": 3,
+    "resonance_bonus": {"damage_mult": 1.15, "duration": 2.0},
+    "counter_relation": 2
+  },
+  {
+    "element_id": 1,
+    "name": "Wood",
+    "on_hit_effect": "bind",
+    "max_stacks": 4,
+    "resonance_trigger": 3,
+    "resonance_bonus": {"spirit_regen": 4.0, "duration": 2.5},
+    "counter_relation": 3
+  },
+  {
+    "element_id": 2,
+    "name": "Metal",
+    "on_hit_effect": "shred",
+    "max_stacks": 4,
+    "resonance_trigger": 2,
+    "resonance_bonus": {"armor_break": 0.18, "duration": 2.2},
+    "counter_relation": 1
+  },
+  {
+    "element_id": 3,
+    "name": "Earth",
+    "on_hit_effect": "stagger",
+    "max_stacks": 4,
+    "resonance_trigger": 2,
+    "resonance_bonus": {"shield": 14, "duration": 3.0},
+    "counter_relation": 4
+  },
+  {
+    "element_id": 4,
+    "name": "Water",
+    "on_hit_effect": "slow",
+    "max_stacks": 5,
+    "resonance_trigger": 3,
+    "resonance_bonus": {"chain": 2, "duration": 2.4},
+    "counter_relation": 0
+  }
+]
