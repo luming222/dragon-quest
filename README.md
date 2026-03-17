@@ -51,6 +51,28 @@
 - 土国方向相关的设计文档、开场稿与 10 分钟竖切方案
 - 世界、地形、关卡与运行管理的基础结构
 
+## 截图预留
+
+建议后续至少补 3 张截图到仓库中，用于快速展示项目当前状态：
+
+1. 主场景全景
+2. 战斗进行中画面
+3. 最能体现土国气质的场景画面
+
+推荐将图片放到 `screenshots/` 目录，并在命名上保持直观，例如：
+
+- `screenshots/main-scene.png`
+- `screenshots/combat.png`
+- `screenshots/earth-nation.png`
+
+图片准备好之后，可以把下面这段替换成正式展示内容：
+
+```md
+![Main Scene](screenshots/main-scene.png)
+![Combat](screenshots/combat.png)
+![Earth Nation](screenshots/earth-nation.png)
+```
+
 ## 当前已知缺失
 
 当前版本仍有一些明确未完成项，这些内容会直接影响它作为完整游戏体验的成熟度：
