@@ -51,27 +51,15 @@
 - 土国方向相关的设计文档、开场稿与 10 分钟竖切方案
 - 世界、地形、关卡与运行管理的基础结构
 
-## 截图预留
+## 截图
 
-建议后续至少补 3 张截图到仓库中，用于快速展示项目当前状态：
+当前仓库已经加入两张运行截图，用于展示项目现阶段的场景与玩法状态：
 
-1. 主场景全景
-2. 战斗进行中画面
-3. 最能体现土国气质的场景画面
+![Main Scene](screenshots/main.png)
 
-推荐将图片放到 `screenshots/` 目录，并在命名上保持直观，例如：
+![Gameplay](screenshots/paly.png)
 
-- `screenshots/main-scene.png`
-- `screenshots/combat.png`
-- `screenshots/earth-nation.png`
-
-图片准备好之后，可以把下面这段替换成正式展示内容：
-
-```md
-![Main Scene](screenshots/main-scene.png)
-![Combat](screenshots/combat.png)
-![Earth Nation](screenshots/earth-nation.png)
-```
+后续如果补充更多展示图，建议继续统一放在 `screenshots/` 目录下。
 
 ## 当前已知缺失
 
@@ -81,7 +69,7 @@
 - 视觉资源风格仍处于混合状态，角色与环境统一性不足
 - 成长、掉落、装备与更完整的数值循环仍在早期阶段
 - 竖切中的叙事演出、伙伴互动与 Boss 命题还需要进一步落地
-- 仓库目前没有录屏、截图或专门的演示素材页
+- 录屏和更完整的演示素材页仍未补齐
 
 ## 运行方式
 
