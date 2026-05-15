@@ -53,11 +53,17 @@
 
 ## 截图
 
-当前仓库已经加入两张运行截图，用于展示项目现阶段的场景与玩法状态：
+当前仓库已经加入多张运行截图，用于展示项目现阶段的场景与玩法状态：
 
 ![Main Scene](screenshots/main.png)
 
 ![Gameplay](screenshots/play.png)
+
+![Screenshot 3](screenshots/x3.png)
+
+![Screenshot 4](screenshots/x4.png)
+
+![Screenshot 5](screenshots/x5.png)
 
 后续如果补充更多展示图，建议继续统一放在 `screenshots/` 目录下。
 
