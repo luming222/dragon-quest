@@ -61,10 +61,6 @@
 
 ![Screenshot 3](screenshots/x3.png)
 
-![Screenshot 4](screenshots/x4.png)
-
-![Screenshot 5](screenshots/x5.png)
-
 后续如果补充更多展示图，建议继续统一放在 `screenshots/` 目录下。
 
 ## 当前已知缺失
